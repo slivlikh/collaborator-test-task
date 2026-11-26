@@ -1,3 +1,5 @@
+@import url('base-tokens.css');
+@import url('theme.css');
 @import url('utils.css');
 
 body {
@@ -7,6 +9,6 @@ body {
   display: grid;
   place-items: center;
   font-family: system-ui, sans-serif;
-  background: #1e3a5f;
-  color: #ffd43b;
+  background: var(--bg-color);
+  color: var(--text-primary);
 }

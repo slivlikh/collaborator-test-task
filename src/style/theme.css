@@ -1,0 +1,5 @@
+:root {
+  --text-primary: var(--palette-yellow);
+  --border-color-primary: var(--palette-yellow);
+  --bg-color: var(--palette-blue);
+}

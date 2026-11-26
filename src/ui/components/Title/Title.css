@@ -1,5 +1,6 @@
 .title {
   font-size: 3rem;
+  color: var(--text-primary);
 
   &:hover {
     text-decoration: underline;
