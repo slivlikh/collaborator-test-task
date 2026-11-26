@@ -1,0 +1,17 @@
+[production]
+>0.5%
+last 2 versions
+not dead
+not op_mini all
+not kaios > 0
+not op_mob > 0
+not and_qq > 0
+not and_uc > 0
+not chrome < 120
+not edge < 120
+not firefox < 120
+
+[development]
+last 1 chrome version
+last 1 firefox version
+last 1 safari version
