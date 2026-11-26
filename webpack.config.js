@@ -22,6 +22,7 @@ export default function (env, argv) {
             clean: true,
         },
         devtool: isProd ? 'source-map' : 'eval-cheap-module-source-map',
+        cache: { type: 'filesystem' },
         resolve: {
             extensions: ['.js', '.jsx'],
         },
