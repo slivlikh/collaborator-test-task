@@ -18,7 +18,11 @@ export default function (env, argv) {
         entry: './src/index.jsx',
         output: {
             path: path.resolve(__dirname, 'dist'),
-            filename: '[name].[contenthash].js',
+            filename: isProd ? '[name].[contenthash].js' : '[name].js',
+            chunkFilename: isProd
+                ? '[name].[contenthash].chunk.js'
+                : '[name].chunk.js',
+            publicPath: '/',
             clean: true,
         },
         devtool: isProd ? 'source-map' : 'eval-cheap-module-source-map',
