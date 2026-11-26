@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { greeting } from './greeting.js';
 import Dropdown from './Dropdown.jsx';
+import { getAppName } from './config/index.js';
+
+const appName = getAppName();
 
 export default function App() {
   const [count, setCount] = useState(1);
@@ -8,7 +11,7 @@ export default function App() {
 
   return (
     <>
-      <h1>{greeting(__APP_NAME__)}</h1>
+      <h1>{greeting(appName)}</h1>
       <div className="card">
         <h2>Card</h2>
         <Dropdown
