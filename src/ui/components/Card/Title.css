@@ -1,0 +1,8 @@
+.card__title {
+  font-size: 3rem;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+  }
+}
