@@ -10,7 +10,7 @@ export default function Dropdown({ options, value, onChange }) {
   };
 
   return (
-    <div className={"dropdown"}>
+    <div className={'dropdown'}>
       <button type="button" onClick={toggle}>
         {value} ▾
       </button>
