@@ -11,7 +11,9 @@ const {DefinePlugin} = webpack;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export default function () {
+export default function (env, argv) {
+    const isProd = argv.mode === 'production';
+
     return {
         entry: './src/index.jsx',
         output: {
@@ -19,6 +21,7 @@ export default function () {
             filename: '[name].[contenthash].js',
             clean: true,
         },
+        devtool: isProd ? 'source-map' : 'eval-cheap-module-source-map',
         resolve: {
             extensions: ['.js', '.jsx'],
         },
