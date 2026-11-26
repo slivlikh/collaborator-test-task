@@ -1,6 +1,7 @@
 import { greeting } from './greeting.js';
 import { getAppName } from './config/index.js';
 import { Card } from './components/Card/index.js';
+import { Title } from './ui/index.js';
 
 const appName = getAppName();
 
@@ -28,7 +29,7 @@ const description = [
 
 export const App = () => (
   <>
-    <h1>{greeting(appName)}</h1>
+    <Title>{greeting(appName)}</Title>
     <Card title="Card" description={description} options={options} />
   </>
 );

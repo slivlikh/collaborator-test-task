@@ -8,13 +8,3 @@ body {
   background: #1e3a5f;
   color: #ffd43b;
 }
-
-h1 {
-  font-size: 3rem;
-
-  &:hover {
-    text-decoration: underline;
-    text-underline-offset: 0.33em;
-    text-decoration-thickness: 0.05em;
-  }
-}
