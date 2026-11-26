@@ -18,7 +18,7 @@ export const Card = ({ title, description, options }) => {
         selectedOption={selectedOption}
         onChange={handleDropdownChange}
       />
-      <CardUI.Description>{description}</CardUI.Description>
+      <CardUI.Description lineClamp={2}>{description}</CardUI.Description>
 
       <ButtonCounter
         onCounterUpdated={handleUpdateCounter}

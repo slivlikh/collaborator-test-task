@@ -1,3 +1,5 @@
-export const Description = ({ children }) => (
-  <p className={`card-description`}>{children}</p>
+export const Description = ({ children, lineClamp }) => (
+  <p className={`card-description ${lineClamp && `line-clamp-${lineClamp}`}`}>
+    {children}
+  </p>
 );
