@@ -16,17 +16,14 @@ export function useKeyboardNavigation(
 ) {
   const handleKeydown = useEffectEvent((e) => {
     const optionsElements = e.currentTarget.children;
-    const current = Array.from(optionsElements).indexOf(document.activeElement);
 
     switch (e.key) {
       case KEYS.ARROW_DOWN: {
-        optionsElements[
-          Math.min(current + 1, optionsElements.length - 1)
-        ].focus();
+        e.target.nextElementSibling?.focus();
         break;
       }
       case KEYS.ARROW_UP: {
-        optionsElements[Math.max(current - 1, 0)].focus();
+        e.target.previousElementSibling?.focus();
         break;
       }
       case KEYS.HOME: {
@@ -38,7 +35,12 @@ export function useKeyboardNavigation(
         break;
       }
       case KEYS.ENTER: {
-        onSelectOption(options[current]);
+        const current = Array.from(optionsElements).indexOf(e.target);
+        if (current > -1) {
+          onSelectOption(options[current]);
+          break;
+        }
+        // unexpected behavior, add logger
         break;
       }
       default:
