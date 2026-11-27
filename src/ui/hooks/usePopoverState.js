@@ -19,7 +19,7 @@ export function usePopoverState(popoverElementRef) {
         abortController.abort();
       };
     }
-  }, []);
+  }, [popoverElementRef]);
 
   return isOpen;
 }
