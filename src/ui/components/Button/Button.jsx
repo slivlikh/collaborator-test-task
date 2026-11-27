@@ -1,8 +1,8 @@
 import './Button.css';
 
-export const Button = ({ children, ...props }) => {
+export const Button = ({ children, className, ...props }) => {
   return (
-    <button {...props} className={`${props.className ?? ''} button`}>
+    <button {...props} className={`${className ?? ''} button`}>
       {children}
     </button>
   );
